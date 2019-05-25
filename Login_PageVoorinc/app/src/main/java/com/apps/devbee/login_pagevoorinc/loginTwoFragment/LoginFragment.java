@@ -43,19 +43,18 @@ public class LoginFragment extends Fragment {
         loginEditTextEmail=v.findViewById(R.id.editText2);
          passwordsize = login_editTextPassword.getText().toString();
         email = loginEditTextEmail.getText().toString();
-
         login_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(Intent.ACTION_PICK);
-                i.setType("image/*");
-                startActivityForResult(i,TEXT_REQUEST);
+                Intent i= new Intent(getActivity(),MainActivity.class);
+                getActivity().startActivity(i);
+                getActivity().finish();
             }
         });
         return v;
     }
 
-    @Override
+    /*@Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==TEXT_REQUEST){
@@ -66,5 +65,5 @@ public class LoginFragment extends Fragment {
                 Toast.makeText(getContext()," no data to reply",Toast.LENGTH_LONG).show();
             }
         }
-    }
+    }*/
 }

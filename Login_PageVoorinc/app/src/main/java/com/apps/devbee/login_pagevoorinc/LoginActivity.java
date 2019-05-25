@@ -56,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         tabsAdapter.addFragment(new LoginFragment(),"Login");
         tabsAdapter.addFragment(new Sign_upFragment(),"Sign up");
         viewPager.setAdapter(tabsAdapter);
-        Toast.makeText(getApplicationContext(),"That is onresume" + sum,Toast.LENGTH_LONG).show();
 
 
     }
