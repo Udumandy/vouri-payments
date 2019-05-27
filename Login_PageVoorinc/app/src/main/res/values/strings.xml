@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login_PageVoorinc</string>
+    <string name="app_name">Vouriinc payment</string>
     <string name="explain_vourinc">send and receive money all over the world with vouriinc.</string>
     <string name="login_text">login</string>
     <string name="sing_up_text">sign up</string>

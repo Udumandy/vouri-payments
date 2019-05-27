@@ -36,14 +36,7 @@ public class Sign_upFragment extends Fragment {
         sign_up_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* String pasword = signupEditText.getText().toString();
-                Intent gotohome=new Intent(getActivity(),MainActivity.class);
-                getActivity().startActivity(gotohome);
-                gotohome.putExtra("password",pasword);*/
-
-                Uri uri= Uri.parse("https;//www.google.com");
-                Intent it = new Intent(Intent.ACTION_VIEW,uri);
-                startActivity(it);
+               
             }
         });
         return  v;
