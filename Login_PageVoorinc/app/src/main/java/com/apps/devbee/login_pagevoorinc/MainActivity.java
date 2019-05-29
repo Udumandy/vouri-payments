@@ -17,6 +17,9 @@ import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.Send_Re
 public class MainActivity extends AppCompatActivity {
 
     FrameLayout framelayout;
+    int i =10;
+
+    int a =3;
 
 
 
@@ -53,4 +56,10 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(getApplicationContext(),"the value is " + (i+a),Toast.LENGTH_LONG).show();
+
+    }
 }

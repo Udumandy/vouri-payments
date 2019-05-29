@@ -36,7 +36,7 @@ public class Sign_upFragment extends Fragment {
         sign_up_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               
+
             }
         });
         return  v;
