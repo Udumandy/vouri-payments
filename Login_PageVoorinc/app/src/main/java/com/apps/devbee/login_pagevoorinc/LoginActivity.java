@@ -1,6 +1,7 @@
 package com.apps.devbee.login_pagevoorinc;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.os.PersistableBundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.apps.devbee.login_pagevoorinc.loginTwoFragment.LoginFragment;
 import com.apps.devbee.login_pagevoorinc.loginTwoFragment.Sign_upFragment;
@@ -18,6 +20,9 @@ public class LoginActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ImageView logo_vouriinc;
     ProgressBar progressBar;
+    int i =4;
+    int j=10;
+    int sum;
 
 
 
@@ -38,6 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
         logo_vouriinc.setAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade));
+        if (savedInstanceState != null) {
+            String count = savedInstanceState.getString("sum");
+
+        }
 
     }
 
@@ -48,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         tabsAdapter.addFragment(new Sign_upFragment(),"Sign up");
         viewPager.setAdapter(tabsAdapter);
 
+
     }
 
     public ImageView getLogo_vouriinc() {
@@ -57,4 +67,6 @@ public class LoginActivity extends AppCompatActivity {
     public ProgressBar getProgressBar() {
         return progressBar;
     }
+
+
 }

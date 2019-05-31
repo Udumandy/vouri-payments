@@ -1,6 +1,8 @@
 package com.apps.devbee.login_pagevoorinc.loginTwoFragment;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +13,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.apps.devbee.login_pagevoorinc.LoginActivity;
+import com.apps.devbee.login_pagevoorinc.MainActivity;
 import com.apps.devbee.login_pagevoorinc.R;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +27,8 @@ public class LoginFragment extends Fragment {
     EditText loginEditTextEmail;
     String passwordsize;
     String email;
+    int TEXT_REQUEST=1;
+    final static String EXTRA_REPLY="2";
 
 
     public LoginFragment() {
@@ -36,26 +43,27 @@ public class LoginFragment extends Fragment {
         loginEditTextEmail=v.findViewById(R.id.editText2);
          passwordsize = login_editTextPassword.getText().toString();
         email = loginEditTextEmail.getText().toString();
-
         login_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((LoginActivity)getContext()).getLogo_vouriinc().setVisibility(View.INVISIBLE);
-                ((LoginActivity)getContext()).getProgressBar().setVisibility(View.VISIBLE);
-                if (!email.isEmpty()&&!passwordsize.isEmpty()&&passwordsize.length()<6){
-                    Toast.makeText(getActivity(),"erreur de  mots de passe : 6 caracteres minimun",Toast.LENGTH_LONG).show();
-                    ((LoginActivity)getContext()).getLogo_vouriinc().setVisibility(View.VISIBLE);
-                    ((LoginActivity)getContext()).getProgressBar().setVisibility(View.INVISIBLE);
-                }
-
-                if (email.isEmpty()||passwordsize.isEmpty()){
-                    Toast.makeText(getActivity(),"remplir tous svp",Toast.LENGTH_LONG).show();
-                    ((LoginActivity)getContext()).getLogo_vouriinc().setVisibility(View.VISIBLE);
-                    ((LoginActivity)getContext()).getProgressBar().setVisibility(View.INVISIBLE);
-                }
+                Intent i= new Intent(getActivity(),MainActivity.class);
+                getActivity().startActivity(i);
+                getActivity().finish();
             }
         });
         return v;
     }
 
+    /*@Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==TEXT_REQUEST){
+            if (requestCode==RESULT_OK){
+                Uri reply =data.getData();
+                Toast.makeText(getContext()," " +reply,Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(getContext()," no data to reply",Toast.LENGTH_LONG).show();
+            }
+        }
+    }*/
 }
