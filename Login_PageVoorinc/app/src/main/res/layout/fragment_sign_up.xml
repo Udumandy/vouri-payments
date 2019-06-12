@@ -6,16 +6,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".loginTwoFragment.Sign_upFragment">
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textinputlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/card_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:alpha="0.4"
+            android:drawableRight="@drawable/ic_person_white_24dp"
+            android:drawablePadding="15dp"
+            android:hint="@string/username"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:inputType="phone"
+            android:padding="15dp"
+            android:textColor="@color/blanc"
+            android:textColorHint="@color/blanc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:alpha="0.4"
+        android:hint="@string/phone"
+        android:drawableRight="@drawable/ic_phone_white_24dp"
+        android:drawablePadding="15dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:textColor="@color/blanc"
+        android:textColorHint="@color/blanc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textinputlayout" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.4"
+        android:drawableRight="@drawable/ic_email_white_24dp"
+        android:drawablePadding="15dp"
         android:hint="@string/email"
         android:background="@drawable/edit_text_background"
         android:ems="10"
@@ -26,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/phone" />
 
     <EditText
         android:id="@+id/editText3"
@@ -41,6 +112,8 @@
         android:background="@drawable/edit_text_background"
         android:ems="10"
         android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_lock_white_24dp"
+        android:drawablePadding="15dp"
         android:padding="15dp"
         android:hint="@string/password_text"
         android:textColor="@color/blanc"
@@ -62,6 +135,8 @@
         android:hint="@string/password_text_confirm_login_two"
         android:background="@drawable/edit_text_background"
         android:ems="10"
+        android:drawableRight="@drawable/ic_lock_white_24dp"
+        android:drawablePadding="15dp"
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColor="@color/blanc"
@@ -69,6 +144,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <Spinner
+        android:id="@+id/Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:entries="@array/countries"
+        app:layout_constraintTop_toBottomOf="@id/editText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+    </Spinner>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/checkbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/Spinner"
+        />
 
     <Button
         android:id="@+id/sign_up_button_two"
@@ -87,5 +194,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+        <Button
+            android:id="@+id/butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/sign_up_background"
+            android:text="@string/fxn"
+            android:textAllCaps="false"
+            android:textColor="@color/blanc"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_button_two"/>
+
+
 </android.support.constraint.ConstraintLayout>
