@@ -9,11 +9,17 @@
     <string name="password_text">password</string>
     <string name="password_text_confirm_login_two">confirm your password</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">Dashboard</string>
-    <string name="title_dashboard">send/remove</string>
-    <string name="title_notifications">profile</string>
+    <string name="title_home">CardScroll</string>
+    <string name="title_dashboard">Dial</string>
+    <string name="title_notifications">Web</string>
+    <string name="images">Images</string>
     <string name="phone">Phone number</string>
     <string name="username">Username</string>
+    <string name="dog">Dog</string>
+    <string name="scroll_text">Once I saw a little bird, coming hop hop hop,
+        so I said, little bird, can you stop stop stop. And as I was going to
+    the window to say, How do you do?, but it shoke its little tail and away
+    it flew. Little bird Little bird, come come again.</string>
     <string-array name="countries">
         <item>Cameroon</item>
         <item>USA</item>

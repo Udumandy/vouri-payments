@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.apps.devbee.login_pagevoorinc.Gestures;
 import com.apps.devbee.login_pagevoorinc.MainActivity;
 import com.apps.devbee.login_pagevoorinc.R;
 
@@ -30,6 +32,7 @@ import java.util.Calendar;
  */
 public class Sign_upFragment extends Fragment implements AdapterView.OnItemSelectedListener{
         Button sign_up_button_two, butt;
+        int i = 0;
 
     public Sign_upFragment() {
         // Required empty public constructor
@@ -90,35 +93,49 @@ public class Sign_upFragment extends Fragment implements AdapterView.OnItemSelec
         sign_up_button_two =(Button) v.findViewById(R.id.sign_up_button_two);
         sign_up_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
-                alertDialog.setTitle("Dialogbox Title");
-                alertDialog.setView(getLayoutInflater().inflate(R.layout.dialogbox, null));
-                alertDialog.setMessage("Message set @setMessage or @setView");
-
-                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(final View view) {
+                i++;
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getContext(), "Cancel", Toast.LENGTH_LONG).show();
-                    }
-                });
+                    public void run() {
+                        if (i == 1) {
+                            Toast.makeText(getContext(),"DoubleClick for gestures",Toast.LENGTH_LONG).show();
+                            AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
+                            alertDialog.setTitle("Dialogbox Title");
+                            alertDialog.setView(getLayoutInflater().inflate(R.layout.dialogbox, null));
+                            alertDialog.setMessage("Message set @setMessage or @setView");
 
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Enter", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getContext(), "Enter", Toast.LENGTH_LONG).show();
-                    }
-                });
+                            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Toast.makeText(getContext(), "Cancel", Toast.LENGTH_LONG).show();
+                                }
+                            });
 
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ignore", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getContext(), "Ignore", Toast.LENGTH_LONG).show();
+                            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Enter", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Toast.makeText(getContext(), "Enter", Toast.LENGTH_LONG).show();
+                                }
+                            });
+
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ignore", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Toast.makeText(getContext(), "Ignore", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                            alertDialog.show();
+                        } else if (i == 2) {
+                            Intent in = new Intent(getContext(), Gestures.class);
+                            startActivity(in);
+                        }
+                        i = 0;
                     }
+                    },500);
+                        }
                 });
-                alertDialog.show();
-            }
-        });
         return  v;
     }
 

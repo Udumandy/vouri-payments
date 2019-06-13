@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -31,6 +35,46 @@ public class LoginFragment extends Fragment {
     final static String EXTRA_REPLY="2";
 
 
+    private android.view.ActionMode.Callback callback = new ActionMode.Callback() {
+        @Override
+        public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+            MenuInflater inflater = actionMode.getMenuInflater();
+            inflater.inflate(R.menu.option,menu);
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+            return false;
+        }
+
+        @Override
+        public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
+            switch (menuItem.getItemId()){
+                case R.id.order:
+                    Toast.makeText(getContext(),"order clicked",Toast.LENGTH_SHORT).show();
+
+                case R.id.contact:
+                    Toast.makeText(getContext(),"contact clicked",Toast.LENGTH_SHORT).show();
+
+                case R.id.favorite:
+                    Toast.makeText(getContext(),"favorite clicked",Toast.LENGTH_SHORT).show();
+
+                case R.id.status:
+                    Toast.makeText(getContext(),"status clicked",Toast.LENGTH_SHORT).show();
+
+                    return true;
+                    default:
+                        return false;
+            }
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode actionMode) {
+
+        }
+    };
+
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -43,6 +87,14 @@ public class LoginFragment extends Fragment {
         loginEditTextEmail=v.findViewById(R.id.editText2);
          passwordsize = login_editTextPassword.getText().toString();
         email = loginEditTextEmail.getText().toString();
+
+        login_button_two.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                getActivity().startActionMode(callback);
+                return false;
+            }
+        });
         login_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

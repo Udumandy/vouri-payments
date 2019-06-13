@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Order"
+        android:id="@+id/order"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:orderInCategory="5"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Contact"
+        android:id="@+id/contact"
+        android:icon="@drawable/ic_person_outline_black_24dp"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Favorites"
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_star_border_black_24dp"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Status"
+        android:id="@+id/status"
+        android:icon="@drawable/ic_lightbulb_outline_black_24dp"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+
+</menu>
