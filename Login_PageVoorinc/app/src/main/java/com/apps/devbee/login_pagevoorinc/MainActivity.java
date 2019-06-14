@@ -10,14 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.DashFragment;
 import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.FrameFragment;
-import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.ProfileFragment;
-import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.Send_Remove_Fragment;
 
 public class MainActivity extends AppCompatActivity {
 

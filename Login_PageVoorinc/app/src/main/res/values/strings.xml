@@ -6,6 +6,14 @@
     <string name="fogot_password_text">https://vouriinc.com/login</string>
 
     <string name="email">email</string>
+    <string name="sender">Sender Name</string>
+    <string name="date">Date:</string>
+    <string name="receiver">Receiver Name</string>
+    <string name="cfa">0.00Fcfa</string>
+    <string name="amount">Amount</string>
+    <string name="dollars">$0.00</string>
+    <string name="info">No information available here</string>
+
     <string name="password_text">password</string>
     <string name="password_text_confirm_login_two">confirm your password</string>
     <string name="title_activity_main">MainActivity</string>
@@ -29,7 +37,4 @@
     <string name="checkbox">Agree to terms and conditions</string>
     <string name="fxn">Function</string>
 
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
