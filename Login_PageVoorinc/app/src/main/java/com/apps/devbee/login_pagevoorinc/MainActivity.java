@@ -7,8 +7,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -17,22 +20,36 @@ import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.FrameFr
 public class MainActivity extends AppCompatActivity {
 
     FrameLayout framelayout;
-    int i =10;
 
-    int a =3;
-
-
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String intent = getIntent().getStringExtra("password");
+        //String intent = getIntent().getStringExtra("password");
+        //Toast.makeText(getApplicationContext(),intent,Toast.LENGTH_LONG).show();
         framelayout = findViewById(R.id.framelayout);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new FrameFragment() ).commit();
-        Toast.makeText(getApplicationContext(),intent,Toast.LENGTH_LONG).show();
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                transfer();
+            }
+        });
+
+    }
+
+    public void transfer(){
+        Intent it = new Intent(this,TransactionDetailActivity.class);
+        startActivity(it);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -73,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(getApplicationContext(),"the value is " + (i+a),Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),"the value is " + (i+a),Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -100,3 +117,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
