@@ -17,8 +17,8 @@
         android:title="@string/title_notifications" />
 
     <item
-        android:id="@+id/navigation_storage"
-        android:icon="@drawable/ic_photo_camera_black_24dp"
-        android:title="@string/images"/>
+        android:id="@+id/finance"
+        android:title="@string/finance"
+        android:icon="@drawable/ic_trending_up_black_24dp"/>
 
 </menu>

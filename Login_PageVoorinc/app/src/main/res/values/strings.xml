@@ -20,7 +20,7 @@
     <string name="password_text">password</string>
     <string name="password_text_confirm_login_two">confirm your password</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">CardScroll</string>
+    <string name="title_home">RecyclerView</string>
     <string name="title_dashboard">Dial</string>
     <string name="title_notifications">Web</string>
     <string name="images">Images</string>
@@ -59,8 +59,21 @@
     <string name="menu_send">Send</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="title_activity_tabbed">TabbedActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab1">First Tab</string>
+    <string name="tab2">Second Tab</string>
+    <string name="tab3">MyTab</string>
     <string name="title_activity_tabs">Tabs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstTab">First Tab Fragment</string>
+    <string name="secondTab">Second Tab Fragment</string>
+    <string name="thirdTab">Third Tab Fragment</string>
+    <string name="finance">Finance</string>
+    <string name="usd">10.05USD</string>
+    <string name="recipient">Recipient</string>
+    <string name="frs">(55,000XAF)</string>
+    <string name="todo">TODO</string>
+    <string name="style_preview">Style Preview</string>
 
 </resources>

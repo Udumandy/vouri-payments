@@ -59,9 +59,12 @@ public class MainActivity extends AppCompatActivity {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    selectedFragment = new FrameFragment();
+                        Intent tt = new Intent(getApplicationContext(), Recycle.class);
+                        startActivity(tt);
+                        return true;
+                    /**selectedFragment = new FrameFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,selectedFragment).commit();
-                    return true;
+                    return true;*/
                 case R.id.navigation_dashboard:
                     Uri uri = Uri.parse("tel:+17135692854");
                     Intent it = new Intent(Intent.ACTION_DIAL,uri);
@@ -72,10 +75,13 @@ public class MainActivity extends AppCompatActivity {
                     Intent in = new Intent(Intent.ACTION_VIEW,ur);
                     startActivity(in);
                     return true;
-                case R.id.navigation_storage:
+                /**case R.id.navigation_storage:
                     Intent tt = new Intent(Intent.ACTION_GET_CONTENT);
                     tt.setType("image/*");
                     startActivityForResult(tt,TEXT_REQUEST);
+                    return true;*/
+                case R.id.finance:
+                    Toast.makeText(getApplicationContext(),"finance...",Toast.LENGTH_SHORT).show();
                     return true;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,selectedFragment).commit();

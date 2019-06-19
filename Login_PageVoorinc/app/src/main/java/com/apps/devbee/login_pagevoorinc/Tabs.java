@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.apps.devbee.login_pagevoorinc.fragment_des_page_de_navigation.FrameFragment;
 import com.apps.devbee.login_pagevoorinc.ui.main.SectionsPagerAdapter;
 
 public class Tabs extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class Tabs extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
+
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
 
