@@ -31,8 +31,8 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View item = mInflater.inflate(R.layout.cardrecycler2,viewGroup,false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View item = mInflater.inflate(viewType,viewGroup,false);
         return new ViewHolder(item, this);
     }
 
@@ -41,7 +41,13 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
         //TransactionsModel model = (TransactionsModel) mlist.get(i);
         //viewHolder.textView.setText(""+model.getTransactionAmount());
         viewHolder.textView.setText(""+mytext.get(i).getTransactionAmount());
+    }
 
+    @Override
+    public int getItemViewType(int position) {
+        if(position == 0)
+            return R.layout.cardrecycler1;
+        return R.layout.cardrecycler2;
     }
 
     @Override

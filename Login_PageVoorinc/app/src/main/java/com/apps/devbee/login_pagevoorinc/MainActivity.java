@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent tt = new Intent(getApplicationContext(), Recycle.class);
                         startActivity(tt);
                         return true;
-                    /**selectedFragment = new FrameFragment();
+                    /*selectedFragment = new FrameFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,selectedFragment).commit();
                     return true;*/
                 case R.id.navigation_dashboard:

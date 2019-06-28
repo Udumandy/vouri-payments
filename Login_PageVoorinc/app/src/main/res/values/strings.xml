@@ -70,10 +70,12 @@
     <string name="secondTab">Second Tab Fragment</string>
     <string name="thirdTab">Third Tab Fragment</string>
     <string name="finance">Finance</string>
-    <string name="usd">10.05USD</string>
+    <string name="usd">USD</string>
+    <string name="fig">10.05</string>
     <string name="recipient">Recipient</string>
     <string name="frs">(55,000XAF)</string>
     <string name="todo">TODO</string>
     <string name="style_preview">Style Preview</string>
+    <string name="time">Time</string>
 
 </resources>

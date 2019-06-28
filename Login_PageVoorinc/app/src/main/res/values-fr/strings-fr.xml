@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vouri</string>
+    <string name="explain_vourinc">"envoyer et recevoir de l'argent partout dans le monde avec vouriinc."</string>
+    <string name="login_text">Connexion</string>
+    <string name="sing_up_text">Inscription</string>
+    <string name="fogot_password_text">https://vouriinc.com/login</string>
+    <string name="navigate">"Aller à l'activité du tiroir de navigation"</string>
+    <string name="tabbed">"Aller à l'activité tabulée"</string>
+    <string name="Vouriinc">Vouriinc</string>
+
+    <string name="email">email</string>
+    <string name="sender">"Nom de l'expéditeur"</string>
+    <string name="date">Date:</string>
+    <string name="receiver">Nom du destinataire</string>
+    <string name="cfa">0.00Fcfa</string>
+    <string name="amount">Montant</string>
+    <string name="dollars">$0.00</string>
+    <string name="info">Aucune information disponible ici</string>
+
+    <string name="password_text">mot de passe</string>
+    <string name="password_text_confirm_login_two">confirmer votre mot de passe</string>
+    <string name="title_activity_main">Activité principale</string>
+    <string name="title_home">RecycleurVoir</string>
+    <string name="title_dashboard">Cadran</string>
+    <string name="title_notifications">Web</string>
+    <string name="images">Images</string>
+    <string name="phone">Numéro de téléphone</string>
+    <string name="username">"Nom d'utilisateur"</string>
+    <string name="dog">Chien</string>
+    <string name="scroll_text">"Une fois que j'ai vu un petit oiseau, à venir hop hop hop,
+         alors j'ai dit, petit oiseau, pouvez-vous arrêter arrêter arrêter. Et comme j'allais
+     la fenêtre pour dire: comment allez-vous? mais elle secoue sa petite queue et s'en va
+     il a volé. Petit oiseau Petit oiseau, viens, viens encore."</string>
+    <string-array name="countries">
+        <item>Cameroun</item>
+        <item>Etats-Unis</item>
+        <item>Canada</item>
+        <item>Chine</item>
+    </string-array>
+    <string name="checkbox">Accepter les termes et conditions</string>
+    <string name="fxn">Une fonction</string>
+    <string name="title_activity_transaction_details">Détails de la transaction</string>
+    <string name="title_activity_transaction_detail">TransactionDetailActivity</string>
+
+    <string name="transaction">Aller aux détails de la transaction</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
+    <string name="nav_header_title">Studio Android</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">En-tête de navigation</string>
+    <string name="action_settings">Réglages</string>
+
+    <string name="menu_home">Accueil</string>
+    <string name="menu_gallery">Galerie</string>
+    <string name="menu_slideshow">Diaporama</string>
+    <string name="menu_tools">Outils</string>
+    <string name="menu_share">Partager</string>
+    <string name="menu_send">Envoyer</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="tab1">Premier onglet</string>
+    <string name="tab2">Deuxième onglet</string>
+    <string name="tab3">MyTab</string>
+    <string name="title_activity_tabs">Onglets</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="firstTab">"Premier fragment d'onglets"</string>
+    <string name="secondTab">"Deuxième fragment d'onglet"</string>
+    <string name="thirdTab">"Troisième fragment d'onglet"</string>
+    <string name="finance">La finance</string>
+    <string name="usd">USD</string>
+    <string name="fig">10.05</string>
+    <string name="recipient">Bénéficiaire</string>
+    <string name="frs">(55,000XAF)</string>
+    <string name="todo">FAIRE</string>
+    <string name="style_preview">Aperçu du style</string>
+    <string name="time">"l'heure"</string>
+
+</resources>

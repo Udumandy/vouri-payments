@@ -26,7 +26,8 @@ public class Recycle extends AppCompatActivity {
         mtext.add(new TransactionsModel(System.currentTimeMillis(), 500.5f, "USD",(short)1));
         mtext.add(new TransactionsModel(System.currentTimeMillis(), 200.5f, "EUR",(short)1));
         mtext.add(new TransactionsModel(System.currentTimeMillis(), 50.5f, "GBP",(short)0));
-
+        mtext.add(new TransactionsModel(System.currentTimeMillis(), 400.5f, "EUR",(short)1));
+        mtext.add(new TransactionsModel(System.currentTimeMillis(), 350.5f, "GBP",(short)0));
         recycler();
     }
 
