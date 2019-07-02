@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,6 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
     List<TransactionsModel> mytext;
     LayoutInflater mInflater;
     Context context;
-
 
 
     public TransactionsAdapter(Context context, ArrayList<TransactionsModel> list) {
@@ -65,20 +65,26 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
 
         TransactionsAdapter adapter;
         TextView textView;
-        ConstraintLayout layout;
+        ConstraintLayout layout, layout1;
 
         public ViewHolder(@NonNull View itemView, TransactionsAdapter adapter) {
             super(itemView);
+            itemView.setOnClickListener(this);
             textView = itemView.findViewById(R.id.textView19);
-            layout = itemView.findViewById(R.id.recyclerItemConstraintLayout);
+            layout = itemView.findViewById(R.id.card_recycler2);
+            layout1 = itemView.findViewById(R.id.card_recycler1);
             this.adapter = adapter;
         }
 
         @Override
         public void onClick(View view) {
             switch(view.getId()){
-                case R.id.recyclerItemConstraintLayout:
-                    Toast.makeText(this.adapter.getContext(), this.textView.getText(), Toast.LENGTH_SHORT).show();
+                case R.id.card_recycler2:
+                    Toast.makeText(this.adapter.getContext(), "Amount is "+this.textView.getText(), Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.card_recycler1:
+                    Toast.makeText(this.adapter.getContext(), "Amount is "+this.textView.getText(), Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
     }

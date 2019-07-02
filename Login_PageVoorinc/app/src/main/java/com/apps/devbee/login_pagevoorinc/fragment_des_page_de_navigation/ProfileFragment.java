@@ -60,7 +60,7 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
         profile_image=v.findViewById(R.id.profile_image);
-        card_recycler=v.findViewById ( R.id.card_recycler );
+        card_recycler=v.findViewById ( R.id.card_recyclerAkah );
         imageButton_profile=v.findViewById(R.id.imageButton_profile);
         modelList=new ArrayList<>(  );
         modelList.add ( new Model ( "Akah Larry") );

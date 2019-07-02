@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +23,8 @@ public class Recycle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle);
         setUp();
-    }
 
+    }
     public void setUp(){
         mtext.add(new TransactionsModel(System.currentTimeMillis(), 500.5f, "USD",(short)1));
         mtext.add(new TransactionsModel(System.currentTimeMillis(), 200.5f, "EUR",(short)1));

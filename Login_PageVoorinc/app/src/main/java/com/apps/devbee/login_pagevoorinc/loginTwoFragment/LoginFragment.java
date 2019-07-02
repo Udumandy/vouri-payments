@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Patterns;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,6 +21,8 @@ import com.apps.devbee.login_pagevoorinc.LoginActivity;
 import com.apps.devbee.login_pagevoorinc.MainActivity;
 import com.apps.devbee.login_pagevoorinc.R;
 
+import java.util.regex.Pattern;
+
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -33,6 +36,8 @@ public class LoginFragment extends Fragment {
     String email;
     int TEXT_REQUEST=1;
     final static String EXTRA_REPLY="2";
+
+    private final static Pattern pswPattern = Pattern.compile(".{6,}");
 
 
     private android.view.ActionMode.Callback callback = new ActionMode.Callback() {
@@ -83,10 +88,13 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_login, container, false);
         login_button_two=v.findViewById(R.id.login_button_two);
-        login_editTextPassword=v.findViewById(R.id.editText);
-        loginEditTextEmail=v.findViewById(R.id.editText2);
+        login_editTextPassword=v.findViewById(R.id.editText2);
+        loginEditTextEmail=v.findViewById(R.id.loginEmail);
          passwordsize = login_editTextPassword.getText().toString();
         email = loginEditTextEmail.getText().toString();
+
+        loginEditTextEmail.clearFocus();
+        login_editTextPassword.clearFocus();
 
         login_button_two.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -98,14 +106,48 @@ public class LoginFragment extends Fragment {
         login_button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getActivity(),MainActivity.class);
-                getActivity().startActivity(i);
-                getActivity().finish();
+                if((!validateEmail() == false) && (!validatePswd() == false)){
+                    Intent i = new Intent(getActivity(), MainActivity.class);
+                    startActivity(i);
+                }else if (!validateEmail() == true) {
+                    loginEditTextEmail.requestFocus();
+                }else if (!validatePswd() == true) {
+                    login_editTextPassword.requestFocus();
+                }
             }
         });
         return v;
     }
 
+    private boolean validateEmail(){
+       /** String emailInput = loginEditTextEmail.getText().toString().trim();
+
+        if (emailInput.isEmpty()){
+            loginEditTextEmail.setError("Field can't be Empty");
+            return false;
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
+            loginEditTextEmail.setError("Please type in a valid email");
+            return false;
+        }else{
+            loginEditTextEmail.setError(null);*/
+            return true;
+        }
+
+
+    private boolean validatePswd() {
+       /**String pswdInput = login_editTextPassword.getText().toString().trim();
+
+        if (pswdInput.isEmpty()) {
+            login_editTextPassword.setError("Field can't be Empty");
+            return false;
+        } else if (!pswPattern.matcher(pswdInput).matches()) {
+            login_editTextPassword.setError("Password must be at least 6 characters");
+            return false;
+        } else {
+            login_editTextPassword.setError(null);*/
+            return true;
+
+    }
     /*@Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

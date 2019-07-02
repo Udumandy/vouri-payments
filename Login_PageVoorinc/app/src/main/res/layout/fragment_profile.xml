@@ -172,7 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/about_icon" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/card_recycler"
+        android:id="@+id/card_recyclerAkah"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

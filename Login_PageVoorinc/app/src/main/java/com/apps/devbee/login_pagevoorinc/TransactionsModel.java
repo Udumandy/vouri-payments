@@ -10,6 +10,15 @@ public class TransactionsModel {
     String transactionSenderId;
     String transactionRecipientId;
 
+    public TransactionsModel(float i) {
+        this.transactionAmount = i;
+    }
+
+    @Override
+    public boolean equals(Object tt){
+        return this.transactionAmount == ((TransactionsModel)tt).getTransactionAmount();
+    }
+
     public String getTransactionId() {
         return transactionId;
     }
